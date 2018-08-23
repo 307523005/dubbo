@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mapper.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.provider.dao.role.SysRoleDao">
+
+
+    <select id="findRoleNameByUserId" resultType="map"
+            parameterType="int">
+
+        SELECT sre.resurl FROM sys_user_role sur LEFT JOIN sys_user su ON su.id = sur.userid
+        LEFT JOIN sys_role sr ON sur.roleid=sr.id LEFT JOIN sys_role_resources srr ON sur.roleid = srr.roleid
+        LEFT JOIN sys_resources sre ON sre.id = srr.resourcesid
+        WHERE su.id=#{userId}
+
+    </select>
+
+
+</mapper>

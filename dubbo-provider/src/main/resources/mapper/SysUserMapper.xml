@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mapper.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.provider.dao.role.SysUserDao">
+
+
+    <select id="selectOne" resultType="com.text.api.entity.role.SysUser"
+            parameterType="com.text.api.entity.role.SysUser">
+
+        SELECT id,userName,passWord,userEnable FROM sys_user WHERE
+        1=1
+        <if test="userName!=null and userName!=''">
+            and userName = #{userName}
+        </if>
+        <if test="passWord!=null and passWord!=''">
+            and passWord = #{passWord}
+        </if>
+
+    </select>
+
+
+</mapper>

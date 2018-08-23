@@ -8,13 +8,14 @@ import com.text.api.entity.RemotecontrolBeen;
 import com.text.api.service.FoodProcess;
 import com.text.api.service.FoodService;
 import com.text.api.service.RemotecontrolService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+//import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/food")
 public class DeliciousFoodController {
 

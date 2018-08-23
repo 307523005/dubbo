@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dubbo-api">
+    <output-path>$PROJECT_DIR$/classes/artifacts/dubbo_api</output-path>
+    <root id="archive" name="dubbo-api.jar" />
+  </artifact>
+</component>
